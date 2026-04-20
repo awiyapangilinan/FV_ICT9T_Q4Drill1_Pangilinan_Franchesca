@@ -15,12 +15,30 @@
         function checkAge() {
         var kWh = document.getElementById("Age").value;
         let cat1 = "Lifeline Consumer";
+        let cat2 = "Low Consumption Consumers";
+        let cat3 = "Average Consumer";
+        let cat4 = "High Consumption Consumer";
+        let cat5 = "Very Hight Consumption";
             if (isNaN(kWh) || age < 0) {
                 alert("Please enter a valid number.");
             }
-            else if (kWh <= 100){
-                alert(A + ": You have a discounted rate.");
+            else if (kWh > 100){
+                alert(cat1 + ": You have a discounted rate.");
             }
+            else if (kWh > 100 && kWh <= 200){
+                alert(cat2 + ": Normal residential rate.");
+            }
+            else if (kWh > 200 && kWh <= 500){
+                alert(cat3 + ": Typical electricity usage.");
+            }
+            else if (kWh > 500 && kWh <= 1000){
+                alert(cat4 + ": Higher electricity usage.");
+            }
+            else if (kWh > 1000){
+                alert(cat5 + ": Heavy electricity users.");
+            }
+            
+
             
            
     
